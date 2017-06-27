@@ -1,3 +1,25 @@
-<p>
-  question works!
-</p>
+<div>
+  
+  <div *ngFor="let information of question">
+    <h3>Category:</h3>
+    <p>{{information.category.title}}</p>
+
+    <h3>Question:</h3>
+    <p>{{information.question}}</p>
+
+    <h3>Points:</h3>
+    <p>{{information.value}}</p>
+
+      <h3>Type Your Answer:</h3>
+      <input [(ngModel)]="userAnswer"/>
+      <button (click)="buttonClicked()" id="submit-button">Submit</button>
+
+      <h3>You earned points of:</h3>    
+      <p>{{information.value}}</p>
+
+      <h3>Your total score is:</h3>     
+      <p>{{information.value}}</p>
+
+  </div>
+</div>
+

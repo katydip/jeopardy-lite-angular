@@ -11,6 +11,11 @@ export class QuestionComponent implements OnInit {
 
   @Input() question;
 
+  userAnswer:string;
+
+  buttonClicked(){
+    console.log(this.userAnswer)
+  }
   constructor() { }
 
   ngOnInit() {
