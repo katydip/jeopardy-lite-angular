@@ -17,7 +17,7 @@ export class JeopardyService {
   constructor(private http: Http) { }
 
       getRecords(endpoint: string): Observable<any[]> {
-        let apiUrl = this.baseUrl+endpoint;
+        let apiUrl = this.baseUrl;
         return this.http.get(apiUrl)
             .map(this.extractData)
             .catch(this.handleError);
