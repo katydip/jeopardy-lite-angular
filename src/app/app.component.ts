@@ -10,18 +10,18 @@ import { JeopardyService } from './jeopardy.service';
 export class AppComponent implements OnInit {
   title = 'Jeopardy Lite';
 
-  information: any[];
+  question: any[];
 
   constructor(private JeopardyService: JeopardyService){}
 
   getInformation(){
-    this.JeopardyService.getRecords("information")
+    this.JeopardyService.getRecords("question")
     //wait for Observable to be done then will do something
     .subscribe(
       //if {} can place more than one function call.  if no {} can only call one function
-      information => 
-      {this.information = information; 
-      console.log(this.information)
+      question => 
+      {this.question = question; 
+      console.log(this.question)
       }
     );
 }
