@@ -1,0 +1,19 @@
+.jumbotron {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 450px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: lightblue;
+      /*background-image: url("../../../assets/images/jeopardy.jpeg");*/
+
+}
+
+#next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}

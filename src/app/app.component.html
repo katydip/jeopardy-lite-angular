@@ -3,11 +3,17 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <img width="300" src="" />
+  <img width="400" src="../../../assets/images/jeopardy.jpeg" />
 </div>
-
+<div class="jumbotron">
+  <div class="container">
+   
 <app-question [question]='question'></app-question>
 
+ </div>
+</div>
+
+
 <div id="next-button">
-    <button (click)="nextQuestion()">Next Question</button>
+    <button (click)="nextQuestion()" type="button" class="btn btn-primary">Next Question</button>
   </div>
