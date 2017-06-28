@@ -27,6 +27,7 @@ export class QuestionComponent implements OnInit {
       console.log(this.totalscore);
 
     }
+    this.userAnswer = "";
 }
   constructor() { }
 
