@@ -19,8 +19,8 @@ export class QuestionComponent implements OnInit {
   result: string = "";
 
   buttonClicked(){
-    console.log(this.userAnswer)
-    console.log(this.question[0].answer)
+    // console.log(this.userAnswer)
+    // console.log(this.question[0].answer)
   
     if(this.userAnswer.toLowerCase() == this.question[0].answer.toLowerCase()){
       console.log("correct");
