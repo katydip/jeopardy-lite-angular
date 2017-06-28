@@ -23,15 +23,15 @@ export class QuestionComponent implements OnInit {
     if(this.userAnswer == this.question[0].answer){
       console.log("correct");
 
-      this.totalscore = this.question[0].value += this.totalscore;
+      this.totalscore = this.question[0].value + this.totalscore;
       console.log(this.totalscore);
 
     }
 }
-
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
