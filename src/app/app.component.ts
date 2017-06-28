@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
       //if {} can place more than one function call.  if no {} can only call one function
       question => 
       {this.question = question; 
-      console.log(this.question)
+      console.log(this.question[0])
       }
     );
 }

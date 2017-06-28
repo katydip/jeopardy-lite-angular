@@ -14,27 +14,18 @@ export class QuestionComponent implements OnInit {
   @Input() question;
 
   userAnswer:string;
-  pointvalue: number;
+  totalscore = 0;
 
   buttonClicked(){
     console.log(this.userAnswer)
-
     console.log(this.question[0].answer)
   
-    if(this.userAnswer == this.question.answer){
-      console.log(true)
-    // this.JeopardyService.getRecords("question", this.question.answer)
+    if(this.userAnswer == this.question[0].answer){
+      console.log("correct");
 
-    //   .subscribe(
-    //       pointvalue => {
-    //         this.question.value = this.question.value;  
-    //       },
-    //   );
-    // }else{
-    //   (this.pointvalue = 0);
-    // }
+      this.totalscore = this.question[0].value += this.totalscore;
+      console.log(this.totalscore);
 
- 
     }
 }
 
