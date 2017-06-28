@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { JeopardyService } from '../jeopardy.service';
 import { AppComponent } from '../app.component';
@@ -12,6 +12,7 @@ import { AppComponent } from '../app.component';
 export class QuestionComponent implements OnInit {
 
   @Input() question;
+  @Output() answered = new EventEmitter();
 
   userAnswer:string;
   totalscore = 0;
@@ -32,6 +33,7 @@ export class QuestionComponent implements OnInit {
       this.result = "*Better luck next time.*";
     }
     this.userAnswer = "";
+    this.answered.emit()
     
 }
 

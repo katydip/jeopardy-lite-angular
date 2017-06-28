@@ -30,8 +30,4 @@ export class AppComponent implements OnInit {
     this.getInformation();
   }
 
-  nextQuestion() {
-    this.getInformation();
-   
-}
 }
