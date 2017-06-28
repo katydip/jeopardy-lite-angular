@@ -16,21 +16,21 @@ export class QuestionComponent implements OnInit {
 
   userAnswer:string;
   totalscore = 0;
-  result: string;
+  result: string = "";
 
   buttonClicked(){
     console.log(this.userAnswer)
     console.log(this.question[0].answer)
   
-    if(this.userAnswer == this.question[0].answer){
+    if(this.userAnswer.toLowerCase() == this.question[0].answer.toLowerCase()){
       console.log("correct");
 
       this.totalscore = this.question[0].value + this.totalscore;
-      console.log(this.totalscore);
-      this.result = "**Great Job! You earned " + this.question[0].value + " points!**";
+      // console.log(this.totalscore);
+      this.result = "Great Job! You earned " + this.question[0].value + " points!";
 
-    }else{
-      this.result = "*Better luck next time.*";
+      }else{
+      this.result = "Better luck next time.";
     }
     this.userAnswer = "";
     this.answered.emit()
