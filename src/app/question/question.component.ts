@@ -15,6 +15,7 @@ export class QuestionComponent implements OnInit {
 
   userAnswer:string;
   totalscore = 0;
+  result: string;
 
   buttonClicked(){
     console.log(this.userAnswer)
@@ -25,10 +26,16 @@ export class QuestionComponent implements OnInit {
 
       this.totalscore = this.question[0].value + this.totalscore;
       console.log(this.totalscore);
+      this.result = "**Great Job! You earned " + this.question[0].value + " points!**";
 
+    }else{
+      this.result = "*Better luck next time.*";
     }
     this.userAnswer = "";
+    
 }
+
+
   constructor() { }
 
   ngOnInit() {
