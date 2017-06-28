@@ -7,15 +7,13 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
-import { AnswerComponent } from './answer/answer.component';
 
 import { JeopardyService } from './jeopardy.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent,
-    AnswerComponent
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
